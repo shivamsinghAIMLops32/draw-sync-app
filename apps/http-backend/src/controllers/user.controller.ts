@@ -2,7 +2,7 @@ import { Request,Response } from "express"
 import {prisma} from "@repo/db";
 
 export const signUser = (req:Request,res:Response) => {
-
+   
 }
 
 

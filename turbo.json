@@ -3,9 +3,9 @@
   "ui": "tui",
   "tasks": {
     "build": {
-            "dependsOn": ["^build", "^db:generate"],
+      "dependsOn": ["^build", "^db:generate"],
       "inputs": ["$TURBO_DEFAULT$", ".env*"],
-      "outputs": [".next/**", "!.next/cache/**"],
+      "outputs": ["dist/**",".next/**", "!.next/cache/**"],
       "env": ["DATABASE_URL"]
     },
     "lint": {
@@ -19,15 +19,15 @@
       "cache": false,
       "persistent": true
     },
-     "db:generate": {
-    "cache": false
-  },
-  "db:migrate": {
-    "cache": false,
-    "persistent": true 
-  },
-  "db:deploy": {
-    "cache": false
-  }
+    "db:generate": {
+      "cache": false
+    },
+    "db:migrate": {
+      "cache": false,
+      "persistent": true
+    },
+    "db:deploy": {
+      "cache": false
+    }
   }
 }
